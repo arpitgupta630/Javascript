@@ -110,3 +110,9 @@ console.log("8"!=7);        // true
 // > !== it check data type as well as value
 console.log('7'!==7);       // true
 console.log(7!==7);         // false
+
+// Falsy Value:                     // Truthy Value:
+    // false                            // True
+    // undefined                        // "Non empty string"
+    // null                             // 1, -1, 0.61, 7896n
+    // 0
