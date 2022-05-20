@@ -52,3 +52,10 @@ let ar1 = ['item1', 'item2']
 let ar2 = ['item5', 'item6']
 let ar3 = [...ar1, 'item3', 'item4', ...ar2]
 console.log(ar3);
+
+//! Creating array with const: we genrally have to create array with const because with const we can use all methods of array but we won't be able to overwrite it.
+
+const newFruits = ['Apple', 'Mango', 'Orange', 'Banana', 'Grapes', 'Blueberry'];
+// newFruits = []      // it will throw an error
+newFruits.push("Kiwi")
+console.log(newFruits);
