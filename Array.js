@@ -59,3 +59,12 @@ const newFruits = ['Apple', 'Mango', 'Orange', 'Banana', 'Grapes', 'Blueberry'];
 // newFruits = []      // it will throw an error
 newFruits.push("Kiwi")
 console.log(newFruits);
+
+//! Array Destructuring: It is new in ES6
+
+const myArray = ['Value1', 'Value2', 'Value3', 'Value4', 'Value5', 'Value6']
+let [myVar1, , myVar2, ...myNewArray] = myArray          // Destructuring Declaration
+
+console.log(`\nValue of myVar1: ${myVar1}`);
+console.log(`Value of myVar2: ${myVar2}`);
+console.log(myNewArray);
