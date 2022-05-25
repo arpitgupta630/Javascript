@@ -19,7 +19,7 @@ while(item < fruits.length){
 console.log(whileFruits);
 
 //! for of Loop
-for(let fruit of fruits){               // it will directly access item in arrat
+for(let fruit of fruits){               // it will directly access item in array
     console.log(fruit);
 }
 
