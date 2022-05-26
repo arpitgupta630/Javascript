@@ -3,7 +3,7 @@
 
 const users = [
     {userId : 1, name : 'Arpit Gupta', gender : 'Male'},
-    {userId : 2, name : 'Shiwani Rathor', gender : 'Female'},
+    {userId : 2, name : 'Monika Gupta', gender : 'Female'},
     {userId : 3, name : 'Nitin Data', gender : 'Male'}
 ];
 
