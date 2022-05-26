@@ -59,7 +59,7 @@ const myArray = [1,2,3,4,5,6,7,8,9]
 // console.log(cubeConverter(myArray));
 
 //! function inside function
-console.log('\nFunction inside Function');
+// console.log('\nFunction inside Function');
 function app(){
     const func1 = function(){
         console.log('hello user');
@@ -89,3 +89,52 @@ function myApp(){               // lexical scope of myfunc1()
     myFunc1();
 };
 // myApp()
+
+//! Rest Parameter
+// console.log('\nRest Parameter');
+function sumAll(...nums){
+    let sum = 0;
+    for (num of nums){
+        sum = sum + num;
+    };
+    return sum;
+}
+// console.log(sumAll(1,2,3,4,5));
+
+//! Param Desstructuring
+    // works on objects
+    // useful in React
+
+const person = {
+    name : 'Arpit',
+    gender : 'Male',
+    age : 23
+};
+
+function getDetails({name, gender, age}){               // Destructerd object
+    console.log(name);
+    console.log(age);
+    console.log(gender);
+}
+// getDetails(person)
+
+//! Callback function: input function as argument
+function myCallFunc(name){
+    console.log('Inside Callback Func');
+    console.log(`My Name is: ${name}`);
+}
+function myFunc(callback, name){
+    console.log('I am First Function');
+    callback(name);
+}
+// myFunc(myCallFunc, 'Arsh')
+
+//! function returning function
+function funcn(){
+    function hello(){
+        return 'Hello World';
+    };
+    return hello;
+};
+const ans = funcn()
+// console.log(ans());
