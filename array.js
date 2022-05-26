@@ -35,7 +35,7 @@ console.log(fruits, shiftedItem);
 let array1 = ['item1', 'item2', 'item3'];
 // let array2 = array1;                 // this indicate same array in heap if we change anything in any array both variable will affect
 // let array2 = [].concat(array1);      // it will make a copy or clone of array1 and store as diffrent array in heap
-// let array2 = array1.slice(0);           // it will also make a copy or clone of array1 and store as diffrent array in heap
+// let array2 = array1.slice(0);        // it will also make a copy or clone of array1 and store as diffrent array in heap
 
 //! New way to clone array: Spread operator
 let array2 = [... array1];           // 3 dot is use for spread operator to clone array and store in heap as new array
