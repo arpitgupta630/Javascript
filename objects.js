@@ -90,3 +90,13 @@ const obj4 = Object.assign({}, obj3);
 obj3.key3 = 'value3';
 console.log(obj3);
 console.log(obj4);
+
+//! Optional Chaining: use in nested object
+console.log('\nOptional Chaining');
+const user ={
+    firstName : 'Arpit',
+    // address : {houseNumber : 236, city : 'Alwar'}
+}
+
+// console.log(user.address.houseNumber);       // This is ok but if houseNumber dosen't exist at particular time it will throw error
+console.log(user?.address?.houseNumber);        // This is optional chaining it won't throw any error no matter if any key is available or not
