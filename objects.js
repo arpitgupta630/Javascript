@@ -79,3 +79,14 @@ let {grade7, grade9:class9, ...restProps} = codingSyllabus;
 console.log(grade7);
 console.log(class9);    // grade9 variable named as class9
 console.log(restProps);
+
+//! Clone using Object.assign
+console.log('\nClone Object using Object.assign');
+const obj3 = {
+    key1 : 'value1',
+    key2 : 'value2',
+};
+const obj4 = Object.assign({}, obj3);
+obj3.key3 = 'value3';
+console.log(obj3);
+console.log(obj4);
