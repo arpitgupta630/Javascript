@@ -1,9 +1,12 @@
 //! Objects: Objects are refrence data type
     // also known as Object Literals.
+    // Onject is not iterable
     // Arrays are good but not suffcient for real world data.
     // Objects store {Key : Value} pair.
     // objects don't have index
     // Object key is also known as object property
+    // Object key is can only be string or symbol
+    // duplicate keys are not allowed in objects
     // in JavaScript key is always in string by default.
     // Properties will not repeat in objects latest property will override old Property
 
