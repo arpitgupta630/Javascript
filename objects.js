@@ -1,4 +1,5 @@
 //! Objects: Objects are refrence data type
+    // also known as Object Literals.
     // Arrays are good but not suffcient for real world data.
     // Objects store {Key : Value} pair.
     // objects don't have index
