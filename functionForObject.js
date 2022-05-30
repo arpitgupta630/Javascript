@@ -1,0 +1,32 @@
+//! Create function to create multiple objects
+const userMethod = {
+    about : function(){
+        return `${this.firstName} is ${this.age} Years Old`;
+    },
+    is18 : function(){
+        if (this.age >= 18){
+            return `${this.firstName}'s Age is ${this.age} Years. ACCESS GRANTED!!!`
+        };
+        return `${this.firstName}'s Age is ${this.age} Years. ACCESS DENIED!!!`
+        
+    }
+};
+function createUser(firstName, lastName, age, city, pinCode){
+    const user = {};
+    user.firstName = firstName;
+    user.lastName = lastName;
+    user.age = age;
+    user.city = city;
+    user.pinCode = pinCode;
+    user.about = userMethod.about;
+    user.is18 = userMethod.is18;
+    return user;
+};
+
+const user1 = createUser('Arpit', 'Gupta', 23, 'Rewari', 123401);
+const user2 = createUser('Nitin', 'Data', 8, 'Alwar', 301001);
+const user3 = createUser('Anshu', 'Gupta', 5, 'Alwar', 301001);
+
+console.log(`${user1.about()}\n${user1.is18()}\n`);
+console.log(`${user2.about()}\n${user2.is18()}\n`);
+console.log(`${user3.about()}\n${user3.is18()}\n`);
