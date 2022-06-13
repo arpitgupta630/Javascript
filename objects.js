@@ -97,6 +97,21 @@ const user ={
     firstName : 'Arpit',
     // address : {houseNumber : 236, city : 'Alwar'}
 }
-
 // console.log(user.address.houseNumber);       // This is ok but if houseNumber dosen't exist at particular time it will throw error
 console.log(user?.address?.houseNumber);        // This is optional chaining it won't throw any error no matter if any key is available or not
+
+//! __proto__ or [[prototype]]
+console.log('\n__proto__ or [[prototype]]');
+// __proto__ and [[prototype]] is same thing
+// in above example obj1 is __proto__ of obj2. So, if we find anything in obj2 and that thing is not in that then javascript will find it in obj1
+const objt1 = {
+    key1 : "Value1",
+    key2 : "Value2"
+};
+
+const objt2 = Object.create(objt1);
+objt2.key3 = 'Value4'
+console.log(objt2);
+console.log(objt2.key2);
+console.log(objt2.__proto__);   //__proto_ of objt2
+

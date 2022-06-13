@@ -12,14 +12,12 @@ const userMethod = {
     }
 };
 function createUser(firstName, lastName, age, city, pinCode){
-    const user = {};
+    const user = Object.create(userMethod);         // use userMethod as __proto__ of user
     user.firstName = firstName;
     user.lastName = lastName;
     user.age = age;
     user.city = city;
     user.pinCode = pinCode;
-    user.about = userMethod.about;
-    user.is18 = userMethod.is18;
     return user;
 };
 
