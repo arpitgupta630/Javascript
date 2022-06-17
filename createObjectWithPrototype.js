@@ -33,3 +33,11 @@ const user3 = new CreateUser('Anshu', 'Gupta', 5, 'Alwar', 301001);
 console.log(`${user1.about()}\n${user1.is18()}\n`);
 console.log(`${user2.about()}\n${user2.is18()}\n`);
 console.log(`${user3.about()}\n${user3.is18()}\n`);
+
+//! Accessing only user key not prototype key:
+for(key in user1){
+    // console.log(key);        // it will give all key user key and prototype key
+    if (user1.hasOwnProperty(key)){
+        console.log(key);
+    };
+};
