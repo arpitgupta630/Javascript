@@ -26,3 +26,20 @@ hello.prototype.greet = function(){
 };
 console.log(hello.prototype);
 hello.prototype.greet();
+
+//! new Keyword :  works with prototype works like chaining between function and prototype
+//? Three works of new:
+    //* 1. put this = {} automatically so we do not have to define new empty object
+    //* 2. put key value pair in this and return it automatically so we do not have to return new empty object
+    //* 3. build chain between function between function and prototype (like we saw in __proto__)
+
+//! IMPORTANT: there is a convention if any function that run used new keyword that function's first letter should be capital   
+function CreateUser(firstName, age){
+    this.firstName = firstName;
+    this.age = age;
+};
+CreateUser.prototype.about = function(){
+    console.log(this.firstName, this.age);
+};
+const user1 = new CreateUser('Arpit', 23);
+user1.about()

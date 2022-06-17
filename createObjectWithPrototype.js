@@ -1,27 +1,34 @@
 //! Create function to create multiple objects using prototype
-function createUser(firstName, lastName, age, city, pinCode){
-    const user = Object.create(createUser.prototype);         // use createUser.prototype as __proto__ of user
-    user.firstName = firstName;
-    user.lastName = lastName;
-    user.age = age;
-    user.city = city;
-    user.pinCode = pinCode;
-    return user;
+
+//! new Keyword :  works with prototype works like chaining between function and prototype
+//? Three works of new:
+    //* 1. put this = {} automatically so we do not have to define new empty object
+    //* 2. put key value pair in this and return it automatically so we do not have to return new empty object
+    //* 3. build chain between function between function and prototype (like we saw in __proto__)
+
+//! IMPORTANT: there is a convention if any function that run used new keyword that function's first letter should be capital   
+function CreateUser(firstName, lastName, age, city, pinCode){
+    this.firstName = firstName;
+    this.lastName = lastName;
+    this.age = age;
+    this.city = city;
+    this.pinCode = pinCode;
 };
 
-createUser.prototype.about = function(){
+//! Prototype: function provide empty object {}. We can access them through prototype. we can add any key value pair to this prototype
+CreateUser.prototype.about = function(){
     return `${this.firstName} is ${this.age} Years Old`;
 };
-createUser.prototype.is18 = function(){
+CreateUser.prototype.is18 = function(){
     if (this.age >= 18){
         return `${this.firstName}'s Age is ${this.age} Years. ACCESS GRANTED!!!`
     };
     return `${this.firstName}'s Age is ${this.age} Years. ACCESS DENIED!!!`   
 };
 
-const user1 = createUser('Arpit', 'Gupta', 23, 'Rewari', 123401);
-const user2 = createUser('Nitin', 'Data', 8, 'Alwar', 301001);
-const user3 = createUser('Anshu', 'Gupta', 5, 'Alwar', 301001);
+const user1 = new CreateUser('Arpit', 'Gupta', 23, 'Rewari', 123401);
+const user2 = new CreateUser('Nitin', 'Data', 8, 'Alwar', 301001);
+const user3 = new CreateUser('Anshu', 'Gupta', 5, 'Alwar', 301001);
 
 console.log(`${user1.about()}\n${user1.is18()}\n`);
 console.log(`${user2.about()}\n${user2.is18()}\n`);
