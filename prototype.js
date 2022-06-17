@@ -43,3 +43,9 @@ CreateUser.prototype.about = function(){
 };
 const user1 = new CreateUser('Arpit', 23);
 user1.about()
+
+//! more about prototype
+console.log('\nMore About Prototype');
+let number = new Array(1,2,3,4);
+console.log(number);
+console.log(Object.getPrototypeOf(number));         // it will return array object all functions that array have 
