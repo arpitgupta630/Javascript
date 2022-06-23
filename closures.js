@@ -26,12 +26,17 @@ ex2()
 
 //Example 3
 console.log('\nExample 3:');
-function power(x){
-    return function(num){
-        console.log(num**x);
-    };
-};
+// function power(x){
+//     return function(num){
+//         return num**x;
+//     };
+// };               
+
+//! This can be written as below in arrow
+
+const power = x => num => num**x;       // Arrow function
+
 const square = power(2);
-square(3);
+console.log(square(3));
 const cube = power(3);
-cube(2);
+console.log(cube(2));
