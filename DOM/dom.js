@@ -73,3 +73,8 @@ for (let item of navItems) {
 //     item.style.borderBottomWidth = '2px';
 //     item.style.fontWeight = 'bold';
 // });
+
+//! innerHTML: we can see or change any HTML code between a particular tag with help of innerHTML
+const headline = document.querySelector('.headline')
+// headline.innerHTML = "<h2 id=\"main-heading\">Heading Changed by innerHTML</h2>"
+// headline.innerHTML += "<button class=\"btn btn-headline\"> innerHTML Button </button>"
