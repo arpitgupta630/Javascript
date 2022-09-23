@@ -1,0 +1,31 @@
+{
+    "distance" : 0,
+    "emailAddress" : "address@email.com",
+    "firstName" : "Arpit",
+    "headLine" : "The World News",
+    "lastName" : "Gupta",
+    "pictureURL" : "https://www.nylas.com/wp-content/uploads/JSON_Blog_Hero.png",
+    "positions" : {
+        "total" : 1,
+        "values" : [
+            {
+                "company" : {
+                    "id" : 451259,
+                    "industry" : "Information Technology & Services",
+                    "name" : "Tesla Inc.",
+                    "size" : "1200+",
+                    "ticker" : "TLA78541PU9",
+                    "type" : "Public Domain"
+                },
+                "id" : 54123659,
+                "isCurrent": true,
+                "location" : {
+                    "latitude" : "48.856613",
+                    "longitude" : "2.352222"
+                },
+                "title" : "Engineer Department"
+            }
+        ]
+    },
+    "publicProfileURL" : "https://www.zip.com/9875/usad"
+}
