@@ -11,12 +11,23 @@
     <h1 class="header">Registration Form</h1>
     <h3 class="header">Register Yourself within 30 Seconds</h3>
     <form class="form-container">
+        <strong id="info">Register with Proper Info</strong><br>
         <input type="text" id="name" placeholder="Enter Your Name" required> <br>
         <input type="email" id="email" placeholder="Enter Your Email Id" required> <br>
         <input type="phone" id="phone" placeholder="Enter Your Phone Number" required> <br>
         <input type="text" id="aadhar" placeholder="Enter Your Aadhar Number" required> <br>
         
-        <button type="submit">Register Me</button>
+        <button type="button" onclick="showInformation()">Register Me</button>
     </form>
+
+    <div id='information' style="text-align: center;" hidden="true">
+        <h2>Your Submitted Information</h2>
+        <p>Name: <strong id="displayName"></strong></p>
+        <p>Email: <strong id="displayEmail"></strong></p>
+        <p>Phone: <strong id="displayPhone"></strong></p>
+        <p>Aadhar: <strong id="displayAadhar"></strong></p>
+    </div>
+
+    <script src="./index.js"></script>
 </body>
 </html>
