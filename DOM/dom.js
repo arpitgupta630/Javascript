@@ -184,7 +184,21 @@ const headerButton = document.querySelector(".btn-headline")
                 //* event.currentTarget
 
 headerButton.addEventListener("click", (event) => {
-    console.log("Information of Event from Callback Function");
-    console.log(event.currentTarget);
-    console.log(event.target);
+    // console.log("Information of Event from Callback Function");
+    // console.log(event.currentTarget);
+    // console.log(event.target);
+})
+
+//! Keypress Event: wherever key press in whole page this will run
+const body = document.querySelector("body");
+body.addEventListener("keypress", (event)=>{
+    // console.log(event.key);
+});
+
+//! mouseover && mouseleave Event: Basically mouse hover
+headerButton.addEventListener("mouseover", (event)=>{
+    // console.log("Over Me");
+})
+headerButton.addEventListener("mouseleave", (event)=>{
+    // console.log("leave Me");
 })
