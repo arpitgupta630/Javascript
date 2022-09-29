@@ -87,3 +87,56 @@ sectionToDo.classList.remove('bg-dark')
 console.log(sectionToDo.classList.contains("container"));       // exist: True or False
 sectionToDo.classList.toggle('bg-dark')             // if bg-dark enable it will get disable and vice-versa
 sectionToDo.classList.toggle('bg-dark')  
+
+//! Add new item to HTML:
+const todoList = document.querySelector(".todo-list")
+// todoList.innerHTML = "<li>new to do 1</li> <li>new to do 2</li>"
+
+//! innerHTML is not helpful to append new elements to HTML so we use documnet.createElement()
+    //* append
+    //* prepend
+    //* remove
+    //* before
+    //* after
+const newTodoItem1 = document.createElement("li")
+newTodoItem1.textContent = "teach students"
+const newTodoItem2 = document.createElement("li")
+newTodoItem2.textContent = "count students"
+const newTodoItem3 = document.createElement("li")
+newTodoItem3.textContent = "Before List"
+const newTodoItem4 = document.createElement("li")
+newTodoItem4.textContent = "After List"
+const newTodoItem5 = newTodoItem1.cloneNode(true)       // it will clone item 4, true means deep clone
+// todoList.append(newTodoItem1)            // it will add it at last
+// todoList.prepend(newTodoItem2)            // it will add it at starting
+// todoList.before(newTodoItem3)            // insert before starting of selected element
+// todoList.after(newTodoItem4)             // insert after ending of selected element
+const todoListAll = document.querySelectorAll(".todo-list li")
+for(let item of todoListAll){
+    if(item.textContent == "To do 0"){
+        item.remove()                       // to remove item
+    }
+}
+
+//! insert with element.insertAdjacentElement(where, HTML)
+    //* beforebegin: insert before starting of selected element (work like before)
+    //* afterbegin: insert after starting of selected element (work like prepend)
+    //* beforeend: insert before ending of selected element (work like append) 
+    //* afterend: insert after ending of selected element (work like after)
+// todoList.insertAdjacentElement("afterbegin", newTodoItem2)
+// todoList.insertAdjacentElement("beforeend", newTodoItem1)
+// todoList.insertAdjacentElement("beforebegin", newTodoItem3)
+// todoList.insertAdjacentElement("afterend", newTodoItem4)
+
+//! old insertion method that support Internet Explorer
+    //* appendChild:    (Work like append)
+    //* insertBefore:   Insert before any item
+    //* replaceChild:   Replace child to new item
+    //* removeChild:    (Work like remove)
+const li = document.createElement("li")
+li.textContent = "new Todo"
+const refrenceNode = document.querySelector(".dummy-li")
+// todoList.appendChild(li)
+// todoList.insertBefore(li, refrenceNode)         // insert before referenceNode
+// todoList.replaceChild(li, refrenceNode)         // replace refrenceNode with li
+// todoList.removeChild(refrenceNode)
