@@ -156,4 +156,35 @@ const todoSection = document.querySelector(".section-todo")
 const todoSectionDimension = todoSection.getBoundingClientRect();
 // console.log(todoSectionDimension);
 
-//!
+//! Events: Ways to add events
+//* 1. Adding events on HTML: won't use because old
+// <input type="submit" value="Add To Do" class="btn" onclick="//code"> 
+
+//* 2. Add events on JS using HTML Tags: won't use because we can't assign more than one in one onclick
+const headerButton = document.querySelector(".btn-headline")
+// headerButton.onclick ()=>console.log("You Clicked me")
+// console.dir(headerButton)
+
+//* 3. Adding a method: addEventListener(Event, Function) should use this
+// headerButton.addEventListener("click", function(){
+//     console.log("You Clicked me")
+//     console.log(this);
+// } )
+
+//! Browser have multiple things
+    //* jsEngine ----> Execute JS file Line by Line
+    //* Browser -----> jsEngine + Extra Features
+    //* Browser -----> jsEngine + WebAPIs
+//! When we add event listener on any element and browser get to know that user perform an event that JS is Listning
+    //? Then Browser Perform Two Things
+        //* give callback function to jsEngine
+        //* Give an Object to callback function which contains information about event (can be use with arrow function)
+            //? in information object two properties are important:
+                //* event.target
+                //* event.currentTarget
+
+headerButton.addEventListener("click", (event) => {
+    console.log("Information of Event from Callback Function");
+    console.log(event.currentTarget);
+    console.log(event.target);
+})
