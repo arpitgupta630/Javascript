@@ -116,6 +116,17 @@ body{
     color: white;
     margin-top: 1rem;
     text-transform: capitalize;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.todo-btn{
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 1rem;
 }
 
 .section-signup{

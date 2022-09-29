@@ -148,7 +148,7 @@ const refrenceNode = document.querySelector(".dummy-li")
 const todoListItems = todoList.getElementsByTagName("li")              //! this give us Live List: HTMLCollection(6) [li, li, li, li, li, li]
 const newListItem = document.createElement("li")
 newListItem.textContent = "New List Item 6"
-todoListItems[0].parentNode.append(newListItem)
+// todoListItems[0].parentNode.append(newListItem)
 // console.log(todoListItems);
 
 //! getting dimension of an element
