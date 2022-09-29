@@ -5,6 +5,8 @@
 const mainHeading = document.getElementById("main-heading");         // selecting element which has "main-heading" id
 // console.log(mainHeading);
 
+//! getElementsBy______ this give us Live List
+
 //! get multiple elements using getElements by class name:
 // const navItems = document.getElementsByClassName("nav-item")     // it will give HTMLCollection (an Array Like Object)
 // console.log(navItems);              // we can do indexing in it
@@ -17,7 +19,7 @@ const mainHeading = document.getElementById("main-heading");         // selectin
 const header = document.querySelector(".header");            //selecting element which has "header" class
 // console.log(header);
 
-//! get multiple elements usig querySelectorAll:
+//! get multiple elements usig querySelectorAll: [It always Give us Static List]
 //* if we have multiple element with same class then it will give only first element
 // const navItem = document.querySelector(".nav-item");
 // console.log(navItem);
@@ -81,10 +83,10 @@ const headline = document.querySelector('.headline')
 
 //! Class List: to see how many classes are given to a particular tag
 const sectionToDo = document.querySelector('.section-todo')
-console.log(sectionToDo.classList)      // it give DOMTokenList(2) ["section-todo", "container", value: "section-signup container"]
+// console.log(sectionToDo.classList)      // it give DOMTokenList(2) ["section-todo", "container", value: "section-signup container"]
 sectionToDo.classList.add('bg-dark')
 sectionToDo.classList.remove('bg-dark')
-console.log(sectionToDo.classList.contains("container"));       // exist: True or False
+// console.log(sectionToDo.classList.contains("container"));       // exist: True or False
 sectionToDo.classList.toggle('bg-dark')             // if bg-dark enable it will get disable and vice-versa
 sectionToDo.classList.toggle('bg-dark')  
 
@@ -140,3 +142,18 @@ const refrenceNode = document.querySelector(".dummy-li")
 // todoList.insertBefore(li, refrenceNode)         // insert before referenceNode
 // todoList.replaceChild(li, refrenceNode)         // replace refrenceNode with li
 // todoList.removeChild(refrenceNode)
+
+//! Static List v/s Live List
+// const todoListItems = document.querySelectorAll(".todo-list li")    //! this give us Static List: NodeList(5) [li, li, li, li, li]
+const todoListItems = todoList.getElementsByTagName("li")              //! this give us Live List: HTMLCollection(6) [li, li, li, li, li, li]
+const newListItem = document.createElement("li")
+newListItem.textContent = "New List Item 6"
+todoListItems[0].parentNode.append(newListItem)
+// console.log(todoListItems);
+
+//! getting dimension of an element
+const todoSection = document.querySelector(".section-todo")
+const todoSectionDimension = todoSection.getBoundingClientRect();
+// console.log(todoSectionDimension);
+
+//!
