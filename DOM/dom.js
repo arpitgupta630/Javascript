@@ -78,3 +78,12 @@ for (let item of navItems) {
 const headline = document.querySelector('.headline')
 // headline.innerHTML = "<h2 id=\"main-heading\">Heading Changed by innerHTML</h2>"
 // headline.innerHTML += "<button class=\"btn btn-headline\"> innerHTML Button </button>"
+
+//! Class List: to see how many classes are given to a particular tag
+const sectionToDo = document.querySelector('.section-todo')
+console.log(sectionToDo.classList)      // it give DOMTokenList(2) ["section-todo", "container", value: "section-signup container"]
+sectionToDo.classList.add('bg-dark')
+sectionToDo.classList.remove('bg-dark')
+console.log(sectionToDo.classList.contains("container"));       // exist: True or False
+sectionToDo.classList.toggle('bg-dark')             // if bg-dark enable it will get disable and vice-versa
+sectionToDo.classList.toggle('bg-dark')  

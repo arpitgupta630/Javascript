@@ -71,6 +71,12 @@ body{
 .section-todo{
     margin-top: 5rem;
     text-align: center;
+    padding: 2rem;
+}
+
+.bg-dark{                           /* Given this class with JS */
+    background: #333;
+    color: #efefef;
 }
 
 .form-todo{
